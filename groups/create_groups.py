@@ -54,18 +54,27 @@ for week in range(number_weeks):
     #print(weeks_groups[week])
 
 # output group view to text, useful for a quick overview of who should be there. 
-with open("groups.txt","w+") as fi:
+with open("groups.txt","w+") as f:
     for week in range(number_weeks):
-        fi.write("\nWeek {week}\n".format(week=week))
+        f.write("\nWeek {week}\n".format(week=week))
         for group,students in weeks_groups[week].items():
-            fi.write("Group: {group}, Students: {students}\n".format(
+            f.write("Group: {group}, Students: {students}\n".format(
                 group=group, students=students))
-fi.close()
+f.close()
 
+f_csv = open("students.csv","w+")
+f_txt = open("students.txt", "w+")
 # output student view, useful for student & spreadhseet. 
 for student in student_list:
+    csv_string = "{student},".format(student=student) # string for final output to csv 
     for week in range(number_weeks):
         for group, students in weeks_groups[week].items():
             if student in students:
                     # human readable output, checking how many string methdos I can stuff in at once. 
-                    print("Student: {student} Week: {week} Group: {group}".format(student=" ".join(student[:-12].split(".")).title(), week=week, group=group))
+                    f_txt.write("{student} Week: {week} Group: {group}\n".format(student=" ".join(student[:-12].split(".")).title(), week=week, group=group))
+                    # machine readable output
+                    csv_string += "{group},".format(group=str(group))
+    f_csv.write(csv_string[:-1] + "\n")
+
+f_csv.close()
+f_txt.close()
