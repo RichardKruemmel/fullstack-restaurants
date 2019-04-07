@@ -149,10 +149,11 @@ if __name__ == '__main__':
     print("Staring restaurants website server.")
 
     PORT = 8000
+    ADDRESS = 'localhost'
 
     # define server daemon, which takes the main application function define above as an argument.
-    httpd = make_server('localhost', PORT, neighborhood_restaurants)
-    print("WSGI Server running on port http://localhost:{port_placeholder}".format(port_placeholder=PORT))
+    httpd = make_server(ADDRESS, PORT, neighborhood_restaurants)
+    print("WSGI Server running on port http://{address_placeholder}:{port_placeholder}".format(address_placeholder=ADDRESS, port_placeholder=PORT))
 
     # server
     httpd.serve_forever()
