@@ -1,0 +1,1 @@
+This repository has sample code and assignments for the Foundations of Software Engineering course at CODE University of Applied Sciences. 
