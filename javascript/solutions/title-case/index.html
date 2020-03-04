@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>JS is Fun</title>
+</head>
+  <body>
+    <h1>Hi, there!</h1>
+  </body>
+</html>
+
+<script>
+
+var needCaps = "capitalize me now"
+
+function capitalize(inputStr) {
+  stringToArray = inputStr.split(' ');
+  for (var i = 0; i < stringToArray.length; i++) {
+    stringToArray[i] = stringToArray[i].charAt(0).toUpperCase()
+    + stringToArray[i].slice(1);
+  }
+  return stringToArray.join(' ');
+}
+console.log(capitalize(needCaps))
+
+</script>
