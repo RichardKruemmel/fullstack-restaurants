@@ -4,3 +4,4 @@ databases/restaurants_in_kreuzberg.sql
 scrap/*
 student
 **/__pycache__
+*.DS_Store
