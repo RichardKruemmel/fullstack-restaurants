@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 
 """ 
-The second file in a series to learn about how testing works.
+The fourth file in a series to learn about how testing works.
 
 In this example, we will check if the correct types are being passed into a function
 """
