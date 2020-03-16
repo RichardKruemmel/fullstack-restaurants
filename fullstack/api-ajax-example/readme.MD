@@ -9,7 +9,7 @@ This should start a server, running by default on http://127.0.0.1:5000/.
 If you navigate to that page in your browser, you should see a page being rendered. Read through that explanation, and try it all out. 
 
 
-If you run into problems, there is a good chance that you have multiple conflicting versions of Python on your computer. This seems annoying, but it serves a purpose: you can write code using different versions of Python and of 3rd party libraries (like Flask). If you run into this already, the best way forward is to use virtual environments to manage this. A good description is [found here](https://docs.python-guide.org/dev/virtualenvs/), and a good explanation for how to set up virtual environments with VSCode [can be found here](https://stackoverflow.com/questions/54106071/how-to-setup-virtual-environment-for-python-in-vs-code).  
+If you run into problems, there is a good chance that you have multiple conflicting versions of Python on your computer. This seems annoying, but it serves a purpose: you can write code using different versions of Python and of 3rd party libraries (like Flask). If you run into this already, the best way forward is to use virtual environments to manage this. A good description can be [found here](https://flask.palletsprojects.com/en/1.1.x/installation/#virtual-environments) or [here](https://docs.python-guide.org/dev/virtualenvs/), and a good explanation for how to set up virtual environments with VSCode [can be found here](https://stackoverflow.com/questions/54106071/how-to-setup-virtual-environment-for-python-in-vs-code).  
 
 
 
