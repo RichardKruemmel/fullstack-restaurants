@@ -2,9 +2,10 @@ from flask import Flask, jsonify, send_file
 from flask_cors import CORS 
 
 app = Flask(__name__)
+#CORS(app, resource=r"/api/*")
 
-# This line makes your backend API accessible to your frontend. Be very careful with this :D!
-CORS(app, resourcse={r'/api/*': {"origins":"http://127.0.0.1"}})
+#cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
+CORS(app)
 
 # define what to do when the user navigates to "/"
 # this serves a static html file. 
