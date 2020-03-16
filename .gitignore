@@ -1,6 +1,7 @@
 databases/restaurants.bak
 databases/restaurants_in_kreuzberg.sql
-.vscode
+**/.vscode
+**/venv
 scrap/*
 student
 **/__pycache__
