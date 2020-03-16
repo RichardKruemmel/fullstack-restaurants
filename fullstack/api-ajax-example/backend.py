@@ -2,10 +2,8 @@ from flask import Flask, jsonify, send_file
 from flask_cors import CORS 
 
 app = Flask(__name__)
-#CORS(app, resource=r"/api/*")
-
-#cors = CORS(app, resources={r"/api/*": {"origins": "*"}})
-CORS(app)
+# enable the api to be accessed by frontend running on localhost
+CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1"}})
 
 # define what to do when the user navigates to "/"
 # this serves a static html file. 
