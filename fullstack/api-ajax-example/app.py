@@ -1,6 +1,9 @@
 from flask import Flask, jsonify, send_file
-app = Flask(__name__)
+from flask_cors import CORS 
 
+app = Flask(__name__)
+# enable the api to be accessed by frontend running on localhost
+CORS(app, resources={r"/api/*": {"origins": "http://127.0.0.1"}})
 
 # define what to do when the user navigates to "/"
 # this serves a static html file. 
@@ -26,6 +29,7 @@ def api_restaurants_all():
     return jsonify(restaurants)
 
 # A HTTP RESTful API Route returning a list of names of restaurants
+
 @app.route('/api/restaurants/names',  methods=['GET'])
 def api_restaurants_names():
     # create a new list
@@ -36,5 +40,8 @@ def api_restaurants_names():
     return jsonify(restaurant_names)
 
 
-# execute 
-app.run()
+
+# Run this application if the file is executed, e.g. as "python3 backend.py" 
+if __name__ == '__main__': 
+    app.testing=True
+    app.run()
