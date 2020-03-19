@@ -1,8 +1,0 @@
-databases/restaurants.bak
-databases/restaurants_in_kreuzberg.sql
-**/.vscode
-**/venv
-scrap/*
-student
-**/__pycache__
-*.DS_Store
